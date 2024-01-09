@@ -17,6 +17,8 @@ export class ClienteModalComponent {
   public nombres = "";
   public aPaterno = "";
   public aMaterno = "";
+  public direccion="";
+  public telefono="";
   public fecNac = "";
 
 
@@ -30,6 +32,8 @@ export class ClienteModalComponent {
     this.nombres = data.nombres;
     this.aPaterno = data.aPaterno;
     this.aMaterno = data.aMaterno;
+    this.direccion=data.direccion;
+    this.telefono=data.telefono;
     this.fecNac = data.fecNac;
   }
 
@@ -39,6 +43,8 @@ export class ClienteModalComponent {
       nombres: this.nombres,
       aPaterno: this.aPaterno,
       aMaterno: this.aMaterno,
+      direccion: this.direccion,
+      telefono: this.telefono,
       fecNac: this.fecNac,
     }
     this.apiProv.createCliente(data)
@@ -60,6 +66,8 @@ export class ClienteModalComponent {
       nombres: this.nombres,
       aPaterno: this.aPaterno,
       aMaterno: this.aMaterno,
+      direccion: this.direccion,
+      telefono:this.telefono,
       fecNac: this.fecNac,
     }
 

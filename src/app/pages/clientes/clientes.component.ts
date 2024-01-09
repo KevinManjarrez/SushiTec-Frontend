@@ -51,6 +51,8 @@ export class ClientesComponent {
         nombres: cliente.nombres,
         aPaterno: cliente.aPaterno,
         aMaterno: cliente.aMaterno,
+        direccion: cliente.direccion,
+        telefono: cliente.telefono,
         fecNac: cliente.fecNac
       },
       disableClose: true,

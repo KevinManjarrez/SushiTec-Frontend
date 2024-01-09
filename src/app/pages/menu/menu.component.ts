@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavComponent } from '../../shared/nav/nav.component';
 import { ApiProvider } from '../../providers/api.prov'
 import { MatDialog } from '@angular/material/dialog';
 import { MenuModalComponent } from '../menu-modal/menu-modal.component';

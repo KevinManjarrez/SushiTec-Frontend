@@ -1,11 +1,8 @@
 <app-nav2></app-nav2>
-
-<div>
-  <button (click)="newMenuModal()" class="bg-green-500">Nuevo Menu</button>
-</div>
-<br />
-
 <div class="container my-3">
+  <div class="d-flex justify-content-start">
+    <button (click)="newMenuModal()" class="btn btn-success mb-3">Nuevo Menu</button>
+  </div>
     <div class="row">
       @for (menu of menus; track menu._id) {
         <div class="col-md-3 mb-4">
@@ -13,7 +10,11 @@
             <img src="{{ menu.img }}" class="card-img-top img-fluid fit-image " alt="Imagen del menú" />
             <div class="card-body py-2">
               <h5 class="card-title mb-1">{{ menu.name }}</h5>
-              <p class="card-text mb-1">{{ menu.categoria }}</p>
+              <p class="card-text mb-1"><strong>Categoría: </strong>{{ menu.categoria }}</p>
+              <p class="card-text mb-1"><strong>Ingredientes:</strong> {{ menu.ingredientes}} </p>
+              <p class="card-text mb-1"><strong>Descripción:</strong> {{ menu.descripcion}} </p>
+              <p class="card-text mb-1"><strong>Precio:</strong> ${{ menu.precio }} </p>
+            
               <div class="btn-group mt-1 w-100 justify-content-between" role="group">
                 <button class="btn btn-warning" (click)="updateMenuModal(menu)">
                   Actualizar
