@@ -1,0 +1,33 @@
+<section>
+    <div class="text-right mx-5">
+        <button (click)="onClose()">
+            X
+        </button>
+    </div>
+
+    <div class="p-6 space-y-4">
+        <h1 class="text-xl font-bold text-black">
+            {{new ? 'Nuevo menu' : 'Actualizar menu'}}
+        </h1>
+        <div class="space-y-4 md:space-y-6">
+            <input  class="bg-black text-white" [(ngModel)]="name" placeholder="Spicy Tuna Roll" ><br>
+            <input class="bg-black text-white" [(ngModel)]="categoria" placeholder="Rollos"><br>
+            <input class="bg-black text-white" [(ngModel)]="ingredientes" placeholder="Atún, salsa picante, arroz"><br>
+            <input class="bg-black text-white" [(ngModel)]="descripcion" placeholder="Rollo de atún picante con arroz"><br>
+            <input class="bg-black text-white" [(ngModel)]="precio" placeholder="299"><br>
+            <input class="bg-black text-white" [(ngModel)]="img" placeholder="URL de Imagen"><br>
+
+            <div class="text-center">
+                @if (new) {
+                    <button (click)="createMenu()" class="bg-blue-500">
+                        Guardar
+                    </button>
+                } @else {
+                    <button (click)="updateMenu()" class="bg-blue-500">
+                        Actualizar
+                    </button>
+                }
+            </div>
+        </div>
+    </div>
+</section>

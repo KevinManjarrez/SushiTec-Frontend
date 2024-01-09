@@ -1,0 +1,11 @@
+.container {
+  padding-bottom: 50px;
+}
+
+.fit-image {
+  object-fit: cover;
+  object-position: center;
+  height: 200px; /* Ajusta este valor según tus necesidades */
+  border: 5px solid;
+  border-image: linear-gradient(to right, green, yellow, red) 1;
+}

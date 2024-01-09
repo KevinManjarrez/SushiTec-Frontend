@@ -1,0 +1,34 @@
+<app-nav2></app-nav2>
+
+<div>
+    <button (click)="newClienteModal()" class="bg-green-500">Nuevo cliente</button>
+</div> <br>
+
+<div class="container my-3">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Teléfono</th>
+          <th>Dirección</th>
+          <th>Acciones</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        @for (cliente of clientes; track cliente._id) {
+          <tr>
+            <td>{{cliente.nombres}}</td>
+            <td>{{cliente.aPaterno}} {{cliente.aMaterno}}</td>
+            <td>{{cliente.telefono}}</td>
+            <td>{{cliente.direccion}}</td>
+            <td>
+              <button class="btn btn-primary mr-2" (click)="updateClienteModal(cliente)">Actualizar</button>
+              <button class="btn btn-danger" (click)="deleteCliente(cliente)">Eliminar</button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>

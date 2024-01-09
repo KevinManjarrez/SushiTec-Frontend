@@ -1,0 +1,32 @@
+<section>
+    <div class="text-right mx-5">
+        <button (click)="onClose()">
+            X
+        </button>
+    </div>
+
+    <div class="p-6 space-y-4">
+        <h1 class="text-xl font-bold text-black">
+            {{new ? 'Nuevo cliente' : 'Actualizar cliente'}}
+        </h1>
+        <div class="space-y-4 md:space-y-6">
+            <input  class="bg-black text-white" [(ngModel)]="nombres" placeholder="Laura" ><br>
+            <input class="bg-black text-white" [(ngModel)]="aPaterno" placeholder="Herrera"><br>
+            <input class="bg-black text-white" [(ngModel)]="aMaterno" placeholder="Lopez"><br>
+            <input class="bg-black text-white" [(ngModel)]="fecNac" placeholder="año-mes-dia"><br>
+
+
+            <div class="text-center">
+                @if (new) {
+                    <button (click)="createCliente()" class="bg-blue-500">
+                        Guardar
+                    </button>
+                } @else {
+                    <button (click)="updateCliente()" class="bg-blue-500">
+                        Actualizar
+                    </button>
+                }
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,22 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos del encabezado */
+.encabezado {
+  display: flex; /* Convierte el contenedor en un contenedor flex */
+  justify-content: center; /* Centra los elementos hijos horizontalmente */
+  align-items: center; 
+  background: linear-gradient(red, yellow); /* Fondo naranja */
+}
+
+
+.logo {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%; 
+}
+
+
+
