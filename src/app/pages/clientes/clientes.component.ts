@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavComponent } from '../../shared/nav/nav.component';
 import { ApiProvider } from '../../providers/api.prov'
 import { MatDialog } from '@angular/material/dialog';
 import Swal from 'sweetalert2'
@@ -33,9 +32,11 @@ export class ClientesComponent {
       data: {
         new: true
       },
-      disableClose: true,
-      hasBackdrop: true,
-      width: '80%',
+      position: {
+        top: '-25%',
+        left: '40%'
+      },
+      width: '20%', // ancho del modal
       height: '80%'
     });
     dialogRef.afterClosed().subscribe((result: any) => {
@@ -55,9 +56,11 @@ export class ClientesComponent {
         telefono: cliente.telefono,
         fecNac: cliente.fecNac
       },
-      disableClose: true,
-      hasBackdrop: true,
-      width: '80%',
+      position: {
+        top: '-27.5%',
+        left: '40%'
+      },
+      width: '20%', // ancho del modal
       height: '80%'
     });
     dialogRef.afterClosed().subscribe((result: any) => {
@@ -86,6 +89,5 @@ export class ClientesComponent {
       }
     });
   }
-
-
 }
+

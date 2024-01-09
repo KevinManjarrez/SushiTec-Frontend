@@ -33,9 +33,11 @@ export class MenuComponent {
       data: {
         new: true
       },
-      disableClose: true,
-      hasBackdrop: true,
-      width: '80%',
+      position: {
+        top: '-40%',
+        left: '40%'
+      },
+      width: '20%', // ancho del modal
       height: '80%'
     });
     dialogRef.afterClosed().subscribe((result: any) => {
@@ -55,9 +57,11 @@ export class MenuComponent {
         precio: menu.precio,
         img: menu.img
       },
-      disableClose: true,
-      hasBackdrop: true,
-      width: '80%',
+      position: {
+        top: '-40%',
+        left: '40%'
+      },
+      width: '20%', // ancho del modal
       height: '80%'
     });
     dialogRef.afterClosed().subscribe((result: any) => {

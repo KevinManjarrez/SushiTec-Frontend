@@ -1,34 +1,58 @@
-<section>
-    <div>
-        <button (click)="onClose()">
-            X
-        </button>
-    </div>
+<div>
+  <button class="btn btn-danger boton" (click)="onClose()">X</button>
+</div>
+<br />
+<br />
 
-    <div>
-        <h1>
-            {{new ? 'Nuevo cliente' : 'Actualizar cliente'}}
-        </h1>
-        <div>
-            <input [(ngModel)]="nombres" placeholder="Nombres" ><br>
-            <input [(ngModel)]="aPaterno" placeholder="Apellido paterno"><br>
-            <input [(ngModel)]="aMaterno" placeholder="Apellido materno"><br>
-            <input [(ngModel)]="direccion" placeholder="direccion"><br>
-            <input [(ngModel)]="telefono" placeholder="telefono"><br>
-            <input [(ngModel)]="fecNac" placeholder="año-mes-dia"><br>
+<div class="d-flex justify-content-center">
+  <h1>
+    {{ new ? "Nuevo cliente" : "Actualizar cliente" }}
+  </h1>
+</div>
+<hr/>
 
+<div class="form-group">
+  <input
+    class="form-control"
+    [(ngModel)]="nombres"
+    placeholder="Nombres"
+  /><br />
+  <input
+    class="form-control"
+    [(ngModel)]="aPaterno"
+    placeholder="Apellido paterno"
+  /><br />
+  <input
+    class="form-control"
+    [(ngModel)]="aMaterno"
+    placeholder="Apellido materno"
+  /><br />
+  <input
+    class="form-control"
+    [(ngModel)]="direccion"
+    placeholder="direccion"
+  /><br />
+  <input
+    class="form-control"
+    [(ngModel)]="telefono"
+    placeholder="telefono"
+  /><br />
+  <input
+    type="date"
+    class="form-control"
+    [(ngModel)]="fecNac"
+    placeholder="año-mes-dia"
+  /><br />
+</div>
 
-            <div>
-                @if (new) {
-                    <button (click)="createCliente()">
-                        Guardar
-                    </button>
-                } @else {
-                    <button (click)="updateCliente()">
-                        Actualizar
-                    </button>
-                }
-            </div>
-        </div>
-    </div>
-</section>
+<div class="modal-footer">
+  <div class="float-left">
+    @if (new) {
+    <button class="btn btn-primary" (click)="createCliente()">Guardar</button>
+    } @else {
+    <button class="btn btn-primary" (click)="updateCliente()">
+      Actualizar
+    </button>
+    }
+  </div>
+</div>
