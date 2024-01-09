@@ -1,30 +1,30 @@
 <section>
-    <div class="text-right mx-5">
+    <div>
         <button (click)="onClose()">
             X
         </button>
     </div>
 
-    <div class="p-6 space-y-4">
-        <h1 class="text-xl font-bold text-black">
+    <div>
+        <h1>
             {{new ? 'Nuevo cliente' : 'Actualizar cliente'}}
         </h1>
-        <div class="space-y-4 md:space-y-6">
-            <input  class="bg-black text-white" [(ngModel)]="nombres" placeholder="Nombres" ><br>
-            <input class="bg-black text-white" [(ngModel)]="aPaterno" placeholder="Apellido paterno"><br>
-            <input class="bg-black text-white" [(ngModel)]="aMaterno" placeholder="Apellido materno"><br>
-            <input class="bg-black text-white" [(ngModel)]="direccion" placeholder="direccion"><br>
-            <input class="bg-black text-white" [(ngModel)]="telefono" placeholder="telefono"><br>
-            <input class="bg-black text-white" [(ngModel)]="fecNac" placeholder="año-mes-dia"><br>
+        <div>
+            <input [(ngModel)]="nombres" placeholder="Nombres" ><br>
+            <input [(ngModel)]="aPaterno" placeholder="Apellido paterno"><br>
+            <input [(ngModel)]="aMaterno" placeholder="Apellido materno"><br>
+            <input [(ngModel)]="direccion" placeholder="direccion"><br>
+            <input [(ngModel)]="telefono" placeholder="telefono"><br>
+            <input [(ngModel)]="fecNac" placeholder="año-mes-dia"><br>
 
 
-            <div class="text-center">
+            <div>
                 @if (new) {
-                    <button (click)="createCliente()" class="bg-blue-500">
+                    <button (click)="createCliente()">
                         Guardar
                     </button>
                 } @else {
-                    <button (click)="updateCliente()" class="bg-blue-500">
+                    <button (click)="updateCliente()">
                         Actualizar
                     </button>
                 }

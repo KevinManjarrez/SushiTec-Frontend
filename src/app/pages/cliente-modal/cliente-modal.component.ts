@@ -52,7 +52,7 @@ export class ClienteModalComponent {
       (res) => {
         if(res){
           Swal.fire({
-            title: "Cliente Creado",
+            title: "Cliente creado.",
             icon: "success"
           });
           this.onClose()
@@ -76,7 +76,7 @@ export class ClienteModalComponent {
       (res) => {
         if(res){
           Swal.fire({
-            title: "Cliente Actualizado",
+            title: "Cliente actualizado.",
             icon: "success"
           });
           this.onClose()

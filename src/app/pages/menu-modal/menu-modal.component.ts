@@ -51,7 +51,7 @@ export class MenuModalComponent {
       (res) => {
         if(res){
           Swal.fire({
-            title: "Menu Creado",
+            title: "Menu creado.",
             icon: "success"
           });
           this.onClose()
@@ -75,7 +75,7 @@ export class MenuModalComponent {
       (res) => {
         if(res){
           Swal.fire({
-            title: "Menu Actualizado",
+            title: "Menu actualizado.",
             icon: "success"
           });
           this.onClose()

@@ -68,16 +68,16 @@ export class MenuComponent {
   public deleteMenu(menu: any){
     Swal.fire({
       showCancelButton: true,
-      title: '¿Desea eleiminar menu: '+ menu.name + ' ?',
-      confirmButtonText: "Confirmar",
-      cancelButtonText: 'Cancelar'
+      title: '¿Desea eliminar menu: '+ menu.name + ' ?',
+      confirmButtonText: "Confirmar.",
+      cancelButtonText: 'Cancelar.'
     }).then((result) => {
       if(result.isConfirmed) {
         this.apiProv.deleteMenu(menu._id)
         .then(
           (res) => {
             Swal.fire({
-              title: "Menu Eliminado",
+              title: "Menu eliminado.",
               icon: "success"
             });
             this.getMenus();

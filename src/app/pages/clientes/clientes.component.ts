@@ -68,16 +68,16 @@ export class ClientesComponent {
   public deleteCliente(cliente: any){
     Swal.fire({
       showCancelButton: true,
-      title: '¿Desea eleiminar cliente: '+ cliente.nombres + ' ?',
-      confirmButtonText: "Confirmar",
-      cancelButtonText: 'Cancelar'
+      title: '¿Desea eliminar cliente: '+ cliente.nombres + ' ?',
+      confirmButtonText: "Confirmar.",
+      cancelButtonText: 'Cancelar.'
     }).then((result) => {
       if(result.isConfirmed) {
         this.apiProv.deleteCliente(cliente._id)
         .then(
           (res) => {
             Swal.fire({
-              title: "cliente Eliminado",
+              title: "Cliente eliminado.",
               icon: "success"
             });
             this.getClientes();
